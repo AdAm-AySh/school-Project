@@ -1,0 +1,353 @@
+:root{
+    font-size: 19px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Droid Arabic Kufi', sans-serif; /* استخدام خط عربي شائع (يفضل تضمين خط مخصص) */
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    direction: rtl; /* تفعيل اتجاه اليمين لليسار */
+}
+aside{
+    position: relative;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: #fff;
+    position: fixed;
+    width: 246.9px;
+    padding: 20px;
+    /* التعديل: إزالة padding-left: 15px; */
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 98%;
+    margin: 20px auto 0;
+}
+.top h1{
+    color: #34495e;
+    font-size: 29px;
+}
+.top i{
+    font-size: 20px;
+    cursor: pointer;
+}
+.top p{
+    font-size: 16px;
+    /* التعديل: محاذاة النص داخل p */
+    text-align: left;
+}
+.top p,.top i{
+    color: #7f8c8d;
+    font-weight: bold;
+}
+ul{
+    height: 100vh;
+}
+ul i{
+    font-size: 22px;
+    margin-left: 15px; /* التعديل: تغيير margin-right إلى margin-left للأيقونة */
+    margin-right: 0;
+    color: #38ccf1;
+    position: relative;
+    bottom: -3px;
+}
+ul li:nth-child(1){
+    background-color: rgba(255, 255, 255, .1);
+    color: white;
+}
+ul li:hover{
+    background-color: rgba(255, 255, 255, .1);
+    color: white;
+}
+ul li{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+    transition: color ease-in-out .2s;
+    padding: 9px 19px 7px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: right; /* محاذاة النص لليمين */
+}
+.logo{
+    font-size: 25px;
+    padding: 16px 0 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+.logo::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: gray;
+    bottom: 0;
+    /* التعديل: تغيير left إلى right */
+    right: 0;
+    margin: 0 15px 0 0; /* التعديل: تعديل الهامش */
+}
+.mainContent{
+    /* التعديل: تغيير margin-left إلى margin-right */
+    margin-right: 270px;
+    margin-left: 0;
+    width: calc(100% - 270px); /* تم تعديله ليكون 270px هنا بدلاً من 300px ليتناسب مع margin-right */
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    text-align: center;
+    width: 98%;
+    margin: 50px auto 0;
+    height: fit-content;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 200px;
+    background-color: #fff;
+    padding: 39px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+.col::before,.col::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #5cf7c8;
+    border-radius: 50%;
+    transition: .3s;
+}
+/* التعديل: عكس اتجاه العناصر الزخرفية */
+.col::before{
+    bottom: -50px;
+    left: -50px; /* تغيير right إلى left */
+    right: auto;
+}
+.col::after{
+    top: -50px;
+    right: -50px; /* تغيير left إلى right */
+    left: auto;
+}
+.col:hover{
+    translate: 0 -10px;
+    box-shadow: 0 5px 10px 0 #b0a5a6;
+}
+.col:hover::after,.col:hover::before{
+    width: 110px;
+    height: 110px;
+}
+i{
+    font-size: 40px;
+    margin-bottom: 9px;
+    color: #2ecc71;
+}
+h4{
+    color: #7f8c8d;
+    margin-bottom: 9px;
+}
+h2{
+    color: #2c3e50;
+}
+.tableList{
+    background-color: #fff;
+    width: 98%;
+    margin: 20px auto 0;
+    padding: 27px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    overflow-x: auto;
+}
+.tableList h2{
+    margin-bottom: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+thead {
+    background-color: #ecf0f1;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: right; /* محاذاة نص الجدول لليمين */
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    color: #34495e;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: #f7f9fb;
+}
+footer{
+    margin: 35px auto;
+    width: fit-content;
+    line-height: 1.5;
+    /* التعديل: تغيير left إلى right */
+    position: relative;
+    right: -10px;
+    left: auto;
+    text-align: center;
+}
+
+/* ----------------------------------- */
+/* ✨ Media Queries for Responsiveness (RTL Adjustments) */
+/* ----------------------------------- */
+
+/* شاشات أجهزة الكمبيوتر المحمولة والأجهزة اللوحية الكبيرة (أقل من 1200 بكسل) */
+@media (max-width: 1200px) {
+    .mainContent {
+        margin-right: 270px; /* التعديل: تغيير margin-left إلى margin-right */
+        margin-left: 0;
+        width: calc(100% - 270px);
+    }
+}
+
+/* شاشات الأجهزة اللوحية الكبيرة (أقل من 1200 بكسل) */
+@media (max-width: 1200px) {
+    aside ul li {
+        font-size: 18px; 
+    }
+    aside ul i {
+        font-size: 20px;
+        margin-left: 10px; /* التعديل: تغيير margin-right إلى margin-left */
+        margin-right: 0;
+    }
+    .mainContent {
+        margin-right: 270px; /* التعديل: تغيير margin-left إلى margin-right */
+        margin-left: 0;
+        width: calc(100% - 270px);
+    }
+}
+
+/* شاشات الأجهزة اللوحية (أقل من 992 بكسل) */
+@media (max-width: 992px) {
+    aside {
+        width: 200px; 
+    }
+    .logo {
+        font-size: 22px;
+    }
+    aside ul li {
+        font-size: 16px; 
+        padding: 8px 15px 6px; 
+    }
+    aside ul i {
+        font-size: 18px;
+        margin-left: 8px; /* التعديل: تغيير margin-right إلى margin-left */
+        margin-right: 0;
+    }
+    .mainContent {
+        margin-right: 220px; /* التعديل: تغيير margin-left إلى margin-right */
+        margin-left: 0;
+        width: calc(100% - 220px);
+    }
+    .row {
+        flex-wrap: wrap; 
+    }
+    .col {
+        flex: 1 1 45%; 
+    }
+}
+
+/* شاشات الأجهزة اللوحية الصغيرة والهواتف الكبيرة (أقل من 768 بكسل) */
+@media (max-width: 768px) {
+    aside {
+        display: none;
+        position: relative; 
+        height: auto;
+    }
+    body {
+        display: block; 
+    }
+    .mainContent {
+        width: 100%; 
+        margin-right: 0; /* التعديل: تغيير margin-left إلى margin-right وإزالة */
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .top {
+        width: 95%; 
+    }
+    .row {
+        flex-direction: column; 
+        gap: 25px; 
+    }
+    .col {
+        flex: 1 1 100%; 
+        width: 95%;
+        margin: auto;
+    }
+    .tableList {
+        padding: 15px; 
+    }
+    .tableList table {
+        min-width: 500px; 
+    }
+    footer {
+        right: 0; /* التعديل: تصحيح موضع التذييل وتغيير left إلى right */
+        left: auto;
+    }
+    .top h1{
+        font-size: 22px;
+    }
+}
+
+/* شاشات الهواتف الذكية (أقل من 480 بكسل) */
+@media (max-width: 480px) {
+    .top h1 {
+        font-size: 24px; 
+    }
+    .top p {
+        font-size: 14px; 
+    }
+    .top {
+        padding: 10px 15px; 
+    }
+    .row {
+        margin-top: 25px; 
+    }
+    .col {
+        padding: 25px 15px;
+    }
+    .top h1{
+        font-size: 24px;
+    }
+}
+p i{
+    transform: rotateY(180deg);
+}
+.lang i{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 25px;
+}
